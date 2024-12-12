@@ -1,4 +1,4 @@
-package com.generation.blogpessoal.model;
+﻿package com.generation.blogpessoal.model;
 
 import java.time.LocalDateTime;
 
@@ -35,8 +35,8 @@ public class Postagem {
 	private LocalDateTime data;
 
     @ManyToOne
-    @JsonIgnoreProperties("postagem")
-    private Tema tema;
+	@JsonIgnoreProperties("postagem")
+	private Tema tema;
 
     @ManyToOne
 	@JsonIgnoreProperties("postagem")
@@ -73,9 +73,9 @@ public class Postagem {
     public void setData(LocalDateTime data) {
         this.data = data;
     }
-
+  
     public Tema getTema() {
-        return tema;
+        return this.tema;
     }
 
     public void setTema(Tema tema) {
@@ -83,7 +83,7 @@ public class Postagem {
     }
 
     public Usuario getUsuario() {
-        return usuario;
+        return this.usuario;
     }
 
     public void setUsuario(Usuario usuario) {
